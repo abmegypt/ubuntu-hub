@@ -18,7 +18,6 @@ sudo apt install tmux -y
 
 # Create a new tmux session and pass the Webuzo installation commands to it
 tmux new-session -d -s mysession bash -c "
-    sudo apt update && sudo apt upgrade -y;
     wget -N https://files.webuzo.com/install.sh;
     chmod 0755 install.sh;
     ./install.sh;
