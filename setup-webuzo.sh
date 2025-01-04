@@ -8,7 +8,10 @@ sudo apt install fish -y
 
 # Set fish as the default shell
 chsh -s /usr/bin/fish
-echo "Fish shell installed and set as default. You will need to log out and log back in for this to take effect."
+echo "Fish shell installed and set as default."
+
+# Switch to fish (interactive session)
+exec fish
 
 # 3. Install tmux
 sudo apt install tmux -y
@@ -23,5 +26,6 @@ tmux new-session -d -s mysession bash -c "
 "
 
 # Notify user of the created tmux session
-echo "Tmux session 'mysession' has been created. Use the following command to attach:"
-echo "tmux attach -t mysession"
+echo -e "\033[1;32mTmux session 'mysession' has been created. Use the following command to attach:\033[0m"
+echo -e "\033[1;34mtmux attach -t mysession\033[0m"
+
